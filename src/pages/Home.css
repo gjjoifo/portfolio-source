@@ -1,0 +1,15 @@
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center; 
+}
+
+.hint {
+  padding-left: 2em;
+  padding-right: 2em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center; 
+}

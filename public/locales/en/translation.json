@@ -1,0 +1,115 @@
+{
+    "nav":
+    {
+        "title": "MY PROJECTS",
+        "home": "Home",
+        "about": "About"
+    },
+
+    "home":
+    {
+        "hint": "Please click on the project you'd like to explore !",
+        "project": {
+            "symb": {
+            "description": "My first personal project. I've been working on it since I started programming."
+            },
+            "ges": {
+            "description": "Internship VR project I developed in Korea. It's an interactive simulation where you can pet an animal with reactive fur."
+            },
+            "engine": {
+            "description": "A custom 3D engine built in Python, featuring a diffuse shading model and several rotation types (Matrix, Euler, Axis-Angle, Quaternion)."
+            },
+            "jpeg_remov": {
+            "description": "A deep learning model using ResNet to remove JPEG compression artifacts from images."
+            },
+            "powder_toy": {
+            "description": "A sand-falling simulation where elements interact based on their types with special reactions."
+            },
+            "additive": {
+            "description": "A hierarchical WebGL model using additive animations that let you dynamically change the pose during runtime while an animation is playing."
+            }
+        }
+    },
+
+    "symb":
+    {
+        "description": "## Symbolic Symphony\n\n### General Overview\n**SymbolicSymphony** is a framework I am currently developing with **Unreal Engine 5.7**, using both **Blueprint** and **C++**. The project aims to fully recreate _Sonic Unleashed_, originally published by **SEGA** and developed by **SONIC TEAM**, which used their own proprietary engine.\n\n### History and Goal\n- The project started as one of my first programming experiences.\n- Relaunched multiple times to keep technologies up to date.\n- No set release date, as the goal is to refine the project as much as possible before completion.",
+        "day": {
+            "section_name": "Day Gameplay",
+            "introduction": "The day sections feature Sonic's classic high-speed platforming gameplay.",
+            "presentation": "## The Sonic We All Know\n\n### General Overview\nInspired by daytime gameplay from **Sonic Unleashed**, the goal is to recreate a high-speed experience in **Unreal Engine 5**. Focus is placed on fluidity, responsiveness, and the sense of speed, while staying true to the character's identity.\n\n### Ability System\n- Uses Unreal's **Gameplay Ability System (GAS)** for modular and scalable code.\n- Each ability (jump, dash, guided attack...) is defined with *tags* to control chaining and interactions.\n\n### Daytime Gameplay / 3D Platforming\n- **Custom physics**: slope handling, wall jumps, speed based on inertia.\n- Object interaction managed via a **dedicated state machine**.\n- Smooth and responsive feel inspired by modern 3D platformers.\n- **Quick Time Events (QTEs)** integrated for cinematic, interactive moments.\n- **Dynamic camera**: cinematic angles and spline-guided transitions to enhance speed perception and highlight key gameplay moments.\n\n### Interface and User Experience\n- Uses **Common UI** to dynamically adjust the interface based on input device (keyboard or controller).\n- Ensures a smooth and consistent experience across platforms.\n\n### Objective\nThe aim is to capture the energy and responsiveness of a modern Sonic while fully leveraging **Unreal Engine 5** capabilities (*Blueprints, Nanite, Lumen, Common UI, etc.*)."
+        },
+        "night": {
+            "section_name": "Night Gameplay",
+            "introduction": "The night sections feature a one-versus-all combat system combined with platforming challenges.",
+            "presentation": "## A Werehog\n\n### General Overview\nThe character draws inspiration from the **Werehog** gameplay, combining combat, platforming, and powerful movement in a grounded and muscular style. Emphasis is placed on the feeling of strength, fluid transitions between exploration and combat, and the balance between raw power and animal agility.\n\n### Visual System\n- Uses a custom **shell system** for fur rendering.\n- Optimized for **Unreal Engine 5**, leveraging **Nanite** and **Lumen**.\n- Allows customization of fur texture, color, and density.\n\n### Combat System\nBuilt on Unreal's **Gameplay Ability System (GAS)**, the player can:\n- Grab and throw enemies.\n- Extend combos.\n- Trigger **QTEs (Quick Time Events)** for cinematic, contextual finishers.\n\n### Locomotion and Movement\nA dedicated **locomotion mode** manages varied movements such as climbing, swinging, and cliff traversal. Physics-based movement provides a realistic sense of weight and responsiveness.\n\n### Defense and AI\n- A **shield system** allows blocking or deflecting attacks.\n- AI, transitioning from **Behavior Trees** to **State Trees**, improves performance and responsiveness.\n\n### Objective\nThe goal of the night-time gameplay is to offer a deep and expressive combat system enriched with diverse movement mechanics, remaining faithful to the **Werehog's identity** while fully leveraging **Unreal Engine 5** capabilities.",
+            "fur": "## Shell System\n\nTo reproduce the Werehog's fur, I used a custom **shell-based fur system**. I initially tested Unreal Engine's **Groom System**, but it was too demanding in terms of performance.\n\nThe shell system works by stacking multiple slightly scaled copies of the mesh (or layers) with a fur texture and transparency, creating the illusion of depth and volume.\n\nThis technique provides a good balance between visual fidelity and runtime performance, especially for stylized or cartoonish fur rendering.\n\nI later reused and adapted this shell fur algorithm in my **Gestalt Therapy** project, where similar stylized visuals were required.",
+            "finisher": "## Finishers\n\nThe combat system includes **finisher sequences** that trigger after the player stuns an enemy by landing enough hits.\n\nWhen the enemy enters a stunned state, a **random QTE prompt** appears on screen.\n\n- If the player succeeds, a cinematic finisher animation plays, instantly defeating the enemy.\n- If the player fails, they lose a portion of their health and **combo/style gauge**, adding risk and tension to the mechanic.\n\nThis system rewards precision and timing while keeping combat dynamic and visually satisfying.",
+            "loco": "## Locomotion System\n\nThe locomotion system is designed to give the Werehog full traversal flexibility while keeping movements fluid and reactive.\n\n- It supports multiple traversal modes: **wall climbing**, **cliff movement**, **swinging**, **slacklining**, and other context-based mobility actions.\n\n- A dedicated **Control Rig** is used to dynamically deform and animate the character's arms, while **Inverse Kinematics (IK)** ensures the hands align naturally with the environment.\n\n- A robust **state machine** manages the different traversal states and transitions, ensuring smooth blending between walking, climbing, swinging, and landing.\n\n- The swinging mechanic allows **full 360° freedom of movement**, and players can add an **impulse** input to control the ejection speed and direction after release.\n\nThis system gives the player a strong sense of physicality and control, making traversal sequences both cinematic and skill-based."
+        },
+        "globe": {
+            "section_name": "Level Selection",
+            "presentation": "## Interactive UI\n\n### General Overview\nAs in the original game, the **globe** has been recreated as the main interface for level selection. The system combines interactive 3D navigation with immersive visual feedback to make level selection engaging and meaningful.\n\n### Navigation and Selection\n- Players can select levels based on **country or region**.\n- **Visual progression**: the planet gradually restores itself as the player advances, with scattered pieces reassembling to symbolize progress and story development.\n\n### Objective\nProvide an immersive and interactive interface that visually connects player progression with the evolution of the planet and the story."
+        }
+
+    },
+
+    "ges": 
+    {
+        "description": "## Gestalt Therapy\n\n### General Overview\n**Gestalt Therapy** is a virtual reality experience developed during a credited internship in South Korea. Its goal is to help players relax by interacting with a virtual animal created using **Unreal Engine 5.6**.\n\n### Pipeline and Development\n- The animal pipeline is highly modular, allowing multiple animals to be integrated and easily customized.\n- Project developed with **VHex Lab**, a South Korean laboratory specializing in psychological games.\n- Developed using **Blueprint** and **C++**.\n\n### Interactions and Physics\n- Users can **pet a virtual dog** using hand tracking provided by the movement system.\n- Custom physical interactions and real-time shader effects simulate realistic fur movement.\n- Dynamic physics allows the animal to react naturally to the environment and to petting.",
+        "fur":
+        {
+            "section_name": "Fur System",
+            "description": "## Interactive Fur\n\n### General Overview\nAs in my previous project **Symbolic Symphony**, this experience features an animal with fur, but with a **unique twist**: the fur is **fully interactive** and moves naturally in the **direction of the touch**. The player can **pet the animal**, whose body reacts physically, creating a calming and immersive experience.\n\n### Dog Physics\n- The virtual dog moves and reacts naturally thanks to its **Physics Body** in **Unreal Engine 5**.\n- Limbs, tail, and body respond to player interactions and environmental forces.\n- No pre-defined animations are needed, providing a dynamic and realistic experience.\n\n### Technical Explanation\n- Vertex colors control fur length and direction in the shader.\n- The red channel indicates the main direction, allowing natural and dynamic fur movement.\n- The creation pipeline remains fast and flexible, making it easy to generate a wide variety of animals."
+         }
+    },
+
+    "ia": 
+    {
+        "description": "## Compressed Image Restoration\n\nI designed this project to explore how deep learning can restore degraded JPEG images. The goal was to **reduce compression artifacts** while preserving essential visual details. I chose the **DIV2K** dataset for its high-resolution image quality.\n\nFrom this dataset, I generated multiple **JPEG-compressed versions** to simulate real-world degradations. The images were stored as **tensor pairs** (original / compressed) in a custom dataset class derived from `torch.utils.data.Dataset`, allowing efficient training and faster data loading.\n\n```python\nclass JPEGDataset(torch.utils.data.Dataset):\n    def __init__(self, imageTensors, compressedTensors):\n        self.imTensors = imageTensors\n        self.compTensors = compressedTensors\n    def __len__(self):\n        return len(self.imTensors)\n    def __getitem__(self, id):\n        return self.imTensors[id], self.compTensors[id]\n```\n\nI implemented **in-memory compression** using a temporary buffer to avoid intermediate files and dynamically adjust JPEG quality during experimentation.",
+        "section_name": "Architecture & Results",
+        "arch": "## Model Architecture\n\nThe model is based on a **Residual Network (ResNet)** architecture tailored for image restoration. Instead of predicting the original image directly, it learns the **residual** the difference between the compressed and the uncompressed version.\n\nEach residual block includes:\n- Two 2D convolutional layers\n- Batch normalization\n- ReLU activation\n- A **skip connection** to improve gradient flow\n\nThis design ensures stable training and better recovery of fine details.\n\n```python\nreturn torch.clamp(x, 0, 1)\n```\n\nThe output tensor is clamped between 0 and 1 to maintain valid intensity values.",
+        "drawback": "## Training and Results\n\nI trained the model for several epochs using a loss function combining **MSE** and **SSIM**, weighted at 0.2 and 0.8. This balance ensures both pixel-level accuracy and structural consistency.\n\n```python\nmseLoss = F.mse_loss(prediction, target)\nssIMLoss = 1 - ssim(prediction, target, data_range=1.0)\nreturn 0.2 * mseLoss + 0.8 * ssIMLoss\n```\n\nThe results show a **significant reduction in compression artifacts**. Although the **PSNR** may slightly decrease, the restored images appear smoother and more natural.\n\nUnder **extreme compression** (JPEG quality ≈ 2), the output tends to look softer due to the irreversible loss of fine details.\n\n### Conclusion\nThis project demonstrates the efficiency of **residual networks** for restoring degraded JPEG images. The combined **MSE + SSIM** loss provides a balanced compromise between pixel fidelity and perceptual quality while highlighting the limitations of aggressive compression."
+    },
+
+    "engine":
+    {
+        "description": "## 3D Rendering Engine - Lighting, Transformations and Camera\n\nThis project explores the fundamentals of a 3D rendering engine, including **directional lighting**, **back-face culling**, **geometric transformations**, and **camera projections**.\n\n### Lighting and Culling\n\n1. Addition of a **directional light source** in *view space*, using a **diffuse lighting model** to illuminate solid triangles.\n2. Implementation of a **back-face culling toggle**, revealing visual artifacts when culling is disabled.\n3. **Triangle picking** system: when a visible triangle is hovered, it becomes highlighted and the **3D coordinates** of the surface point are displayed.\n\n### Transformations\n\nThe engine supports full **3D object transformations**:\n\n- **Translation**, **rotation**, and **scaling** using transformation matrices.\n- Multiple rotation representations: **Euler angles**, **axis-angle**, and **quaternions**.\n- Smooth return to the initial orientation using **LERP** for matrix rotations and **SLERP** for quaternions, demonstrating their shortest-path interpolation.\n\n### Projection and Camera\n\nSupports both **orthographic** and **perspective projections**, with dynamic switching between modes.\n\nAn **orbit camera** based on **spherical coordinates** provides smooth and intuitive navigation around 3D objects.",
+
+        "triangulation": {
+            "section_name": "Triangulation",
+            "description": "## Triangulation\n\n### Implemented Algorithms\n\n- **Naive Triangulation**  \n- **Delaunay Triangulation**  \n- **Incremental Delaunay**  \n- **Voronoi Diagrams**\n\n### Purpose\n\nThese algorithms subdivide a set of points into **optimized triangles**, useful for **mesh generation**, **geometry processing**, and **surface modeling**."
+        },
+
+        "convexhull": {
+            "section_name": "Convex Hull",
+            "description": "## Convex Hull\n\n### Implemented Algorithms\n\n- **Extreme Edge**  \n- **Jarvis March (Gift Wrapping)**  \n- **Graham Scan**\n\n### Purpose\n\nThese methods compute the **minimal boundary** enclosing a set of points. The convex hull is a key structure in **collision detection**, **shape analysis**, and **geometry simplification**."
+        },
+
+        "point": {
+            "section_name": "Point Inside Polygon",
+            "description": "## Point Inside Polygon\n\n### Methods Used\n\n- **Convex polygon:** Direction-based edge checking.  \n- **Non-convex polygon:** **Edge intersection counting** method.\n\n### Functionality\n\nThe algorithm automatically detects whether the polygon is convex or not and applies the corresponding method to determine if the point lies within the polygon's surface."
+        }
+    },
+
+    "powder": 
+    {
+        "section_name": "Powder Elements",
+        "role": "Group Project - Scene creation, UI, Base Classes for elements (Solid/Liquid/Gas), Cell, Weather API fetch",
+        "description": "## Elements - Powder\n\n### Purpose\nSimulation of falling sand or powder particles with physics interaction and unique behaviors for each element type.\n\n### Architecture\n- Each element derives from the **Cell** class.  \n- The abstract **update()** method allows each element to have its own rules, avoiding downcasting and simplifying engine logic.\n- Example: sand, water, and steam have different update behaviors.\n\n### Grid\n- The **grid separates drawing from physics**, allowing cells larger than a pixel and independent cell sizing.\n- Each update computes the grid physics first, then updates screen pixels according to the cell size.\n\n### Background\n- Background is updated via an **API request** to fetch the current weather.  \n- A **convolutional blur** is applied and placed on a **separate layer**, preventing interference with foreground particle rendering.",
+        "class":
+        {
+            "section_name": "Class Hierarchy",
+            "description": "## Element Classes\n\n### Cell\n- Base class for all elements.  \n- Contains the abstract **update()** method to define specific behavior.\n\n### Solid\n- Parent class for all solid elements.\n- **MoveableSolid**: solids that can move (e.g., sand, rock).  \n- **StaticSolid**: fixed elements in the scene (e.g., wall, terrain).\n\n### Liquid\n- Class for liquids (e.g., water).\n- Can transform into gas after a certain time or under certain conditions.\n- Interaction with terrain: water on dirt can create life.\n\n### Gas\n- Class for gases (e.g., steam).\n- Can condense into liquid depending on conditions.\n\n### Physical Behavior\n- Solids like rock or sand are **denser** than water and sink.  \n- Gases are **less dense** than air and rise.  \n- Phase interactions (solid/liquid/gas) create dynamic and realistic behaviors."
+        }
+    },
+
+    "model": 
+    {
+        "description": "## Hierarchical WebGL Model - Additive Animations and Interactivity\n\nThis project presents a **hierarchical WebGL model** demonstrating articulated motion through an **additive animation** system. Each body segment belongs to a parent–child hierarchy, allowing both local and global transformations to combine smoothly in real time.\n\n### Overview\n\nThe model features **interactive bone control during playback**. Using rotation sliders, the user can modify joint angles and poses while an animation is running. This approach highlights how additive transformations can be applied dynamically to influence an ongoing animation, producing expressive and customizable motion.\n\n### Features\n\n- **Hierarchical structure** with up to four articulation levels (root > torso > limb > joint)\n- **27 degrees of freedom**, allowing a wide range of natural movements\n- **Additive animation system**, enabling simultaneous bone manipulation during animation playback\n- **Interactive sliders** for adjusting rotation, amplitude, and animation speed\n- **UV texture mapping** for detailed surface rendering\n- **Blinn–Phong lighting model in view space** for realistic shading with dynamic light control\n- **Runtime editing** of parameters such as light position, material properties, and body color\n\n### Objectives\n\nThe main goal of this project is to demonstrate how **hierarchical transformations** and **additive motion systems** can be implemented within a low-level WebGL pipeline. It provides insight into how transformation matrices, normal vectors, and lighting equations interact to produce smooth and interactive animations.\n\n### Interactivity\n\nUsers can:\n\n- Modify individual bones in real time while an animation is playing\n- Adjust light position and intensity dynamically\n- Change material and color properties at runtime\n- Control animation parameters such as rotation speed and amplitude through sliders\n\nThis project highlights the integration of **3D kinematics**, **hierarchical modeling**, and **real-time GPU rendering**, showing how complex articulated models can be animated and controlled interactively using WebGL.",
+        "section_name": "MathLogic",
+        "math": "### Mathematical Logic\n\nAnimations use a combination of **rotations through sinusoidal functions** to achieve a periodic effect. For each animation, the percentage of completion is tracked and used as input to the sine functions.\n\n#### Example Functions\n```javascript\n/** \n * Periodic sine bump function: rises and falls smoothly between p and 1\n * Returns 0 when x < p, and a full sine wave from p to 1\n */\nfunction sinBump(period, x, p) {\n    if (x < p || p == 1.0) return 0.0;\n    return Math.sin(((x - p) / (1 - p)) * (period * TWO_PI));\n}\n\n/** \n * Non-periodic sine bump function: single smooth positive bump (0 to PI)\n * Returns 0 when x < p, and one positive sine lobe from p to 1\n */\nfunction nonPeriodicalSinBump(period, x, p) {\n    if (x < p || p == 1.0) return 0.0;\n    return Math.sin(((x - p) / (1 - p)) * (period * PI));\n}\n```"
+    }
+
+
+}

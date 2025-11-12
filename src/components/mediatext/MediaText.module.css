@@ -1,0 +1,35 @@
+.day-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+
+.showcase-video,
+.showcase-image,
+.text-zone {
+  flex: 1 1 300px;
+  min-width: 300px;
+}
+
+
+.showcase-image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 20px;
+  display: block;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+@media (max-width: 768px) {
+  .day-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .showcase-image {
+    max-width: 90%;
+  }
+}

@@ -1,0 +1,53 @@
+/*.topSection {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.videoSection 
+{
+  flex: 2 1 400px;
+  min-width: 300px;
+}
+
+.infoSection 
+{
+  flex: 1 1 250px;
+  min-width: 250px;
+}
+
+.descriptionSection
+{
+  padding-top: 6em;
+}
+
+
+@media (max-width: 768px) {
+  .topSection 
+  {
+    flex-direction: column;
+  }
+
+  .videoSection,
+  .infoSection 
+  {
+    width: 100%;
+  }
+}*/
+.topSection {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.videoSection,
+.infoSection {
+  flex: 1 1 300px;
+}
+
+.descriptionSection
+{
+  padding-top: 2em;
+}
+

@@ -1,0 +1,25 @@
+.section-divider-wrapper {
+  width: 100%;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.section-divider-line {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.section-title {
+  white-space: nowrap;
+  margin: 0;
+}
+
+.section-divider {
+  flex-grow: 1;
+  height: 1px;
+  background-color: #ccc;
+  border: none;
+}
+
